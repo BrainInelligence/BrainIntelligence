@@ -1,0 +1,86 @@
+/* Общие стили */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #fff;
+    background-color: #000;
+    overflow: hidden; /* Для анимации фона */
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Шапка */
+.header {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    position: relative;
+    z-index: 2;
+}
+
+.header-title {
+    font-size: 36px;
+    margin: 0;
+}
+
+/* Основной контент */
+.main {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+}
+
+.main-title {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 15px 30px;
+    font-size: 18px;
+    color: #fff;
+    background-color: #007bff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+/* Анимация фона */
+@keyframes moveStars {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: -1000px 500px;
+    }
+}
+
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('https://via.placeholder.com/1500x800') no-repeat center center;
+    background-size: cover;
+    animation: moveStars 30s linear infinite;
+    z-index: 1;
+    opacity: 0.8;
+}
