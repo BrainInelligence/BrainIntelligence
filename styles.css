@@ -84,3 +84,29 @@ body::before {
     z-index: 1;
     opacity: 0.8;
 }
+
+/* Вторая кнопка */
+.secondary-btn {
+    background-color: #28a745; /* Зеленый цвет */
+    margin-top: 20px;
+}
+
+.secondary-btn:hover {
+    background-color: #218838;
+}
+
+/* Скрытый текст с промокодом */
+.promo-code {
+    margin-top: 20px;
+    font-size: 18px;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 5px;
+    display: none; /* По умолчанию скрыт */
+}
+
+.hidden {
+    display: none; /* Для управления видимостью через JS */
+}
