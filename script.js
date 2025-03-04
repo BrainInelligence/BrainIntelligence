@@ -62,3 +62,22 @@ function animate() {
 }
 
 animate();
+
+// Находим элементы
+const promoButton = document.getElementById('promoButton');
+const promoCode = document.getElementById('promoCode');
+
+// Добавляем обработчик события на кнопку
+promoButton.addEventListener('click', () => {
+    if (promoCode.classList.contains('hidden')) {
+        // Показываем промокод
+        promoCode.classList.remove('hidden');
+        promoCode.style.display = 'block';
+        promoButton.textContent = 'Скрыть промокод';
+    } else {
+        // Скрываем промокод
+        promoCode.classList.add('hidden');
+        promoCode.style.display = 'none';
+        promoButton.textContent = 'Получить промокод';
+    }
+});
